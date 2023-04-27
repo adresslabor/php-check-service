@@ -1,0 +1,19 @@
+{
+    "name": "adresslabor/php-client",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Adresslabor\\PhpClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pascholda1",
+            "email": "dev@pascholda.one"
+        }
+    ]
+}
