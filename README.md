@@ -50,5 +50,16 @@ $pbtResult = $checkClient->telephoneDirectory("Donald", "Duck", "Kolping Str.", 
 $vatidResult = $checkClient->vatNumberCheck("DE304496992");
 $vatidxResult = $checkClient->vatNumberCheck("DE304496992", true);
 
+// execute multiple checks in one single request
+$multiCheckResult = $checkClient->check(\Adresslabor\CheckClient::PATH_V3, [
+    'product' => 'fk,nc,scx',
+    'firstname' => 'Rolf',
+    'lastname' => 'Paschold',
+    'street' => 'Kolping Str.',
+    'hno' => '14',
+    'zip' => '63768',
+    'city' => 'Hösbach'
+])
+
 
 ```
