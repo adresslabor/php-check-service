@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Uri;
 
 /**
- * The Adresslabor CheckClient is an utility class for the Adresslabor address validation service.
+ * The Adresslabor CheckClient is a utility class for the Adresslabor address validation service.
  * For more information visit <a href="https://adresslabor.de" target="_blank">adresslabor.de</a>
  */
 class CheckClient
