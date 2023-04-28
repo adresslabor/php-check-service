@@ -1,5 +1,5 @@
 {
-	"name": "adresslabor/php-client",
+	"name": "adresslabor/check-client",
 	"type": "library",
 	"require": {
 		"php": ">=7.2.5",
