@@ -26,17 +26,17 @@ $checkClient = new \Adresslabor\CheckClient($apiCid, $apiKey, $associative);
 $availableCredits = $checkClient->credits;
 
 // https://adresslabor.de/de/produkte/adress-check-dach.html
-$scResult = $checkClient->addressCheckDACH("Kolping Str.", "14", "63768", "Hösbach", "DE")
-$scxResult = $checkClient->addressCheckDACH("Kolping Str.", "14", "63768", "Hösbach", "DE", true)
+$scResult = $checkClient->addressCheckDACH("Kolping Str.", "14", "63768", "Hösbach", "DE");
+$scxResult = $checkClient->addressCheckDACH("Kolping Str.", "14", "63768", "Hösbach", "DE", true);
 
 // https://adresslabor.de/de/produkte/adress-check-world.html
-$scIntResult = $checkClient->addressCheckWorld("Kolping Str.", "14", "63768", "Hösbach", "DE")
+$scIntResult = $checkClient->addressCheckWorld("Kolping Str.", "14", "63768", "Hösbach", "DE","","","", "", "", "");
 
 // https://adresslabor.de/de/produkte/fake-check.html
-$fkResult = $checkClient->fakeCheck("Donald", "Duck", "Kolping Str.", "14", "63768", "Hösbach", "DE")
+$fkResult = $checkClient->fakeCheck("Donald", "Duck", "Kolping Str.", "14", "63768", "Hösbach", "DE");
 
 // https://adresslabor.de/de/produkte/name-check-b2c.html
-$fkResult = $checkClient->nameCheckB2C("Rolf", "Paschold", "Frau", "Dr.")
+$ncResult = $checkClient->nameCheckB2C("Rolf", "Paschold", "Frau", "Dr.");
 
 // https://adresslabor.de/de/produkte/e-mail-check.html
 $emResult = $checkClient->emailCheck("prof@adresslabor.de");
@@ -59,7 +59,7 @@ $multiCheckResult = $checkClient->check(\Adresslabor\CheckClient::PATH_V3, [
     'hno' => '14',
     'zip' => '63768',
     'city' => 'Hösbach'
-])
+]);
 
 
 ```
