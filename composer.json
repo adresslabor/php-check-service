@@ -1,6 +1,7 @@
 {
 	"name": "adresslabor/check-service",
 	"type": "library",
+	"version": "1.0.0",
 	"require": {
 		"php": ">=7.2.5",
 		"guzzlehttp/guzzle": "^7.6.1"
