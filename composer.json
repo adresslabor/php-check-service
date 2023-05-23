@@ -1,10 +1,10 @@
 {
 	"name": "adresslabor/check-service",
+	"description": "A helper library to optimise data where it is generated! Real-time checks on the website or in any application.",
 	"type": "library",
-	"version": "1.0.0",
 	"require": {
 		"php": ">=7.2.5",
-		"guzzlehttp/guzzle": ">=7.2"
+		"guzzlehttp/guzzle": "^7"
 	},
 	"license": "MIT",
 	"autoload": {
