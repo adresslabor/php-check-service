@@ -21,7 +21,7 @@ $apiKey = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
 $associative = true;
 
 // The client will test your credentials first
-$checkClient = new \Adresslabor\CheckClient($apiCid, $apiKey, $associative);
+$checkClient = new \Adresslabor\CheckService\CheckClient($apiCid, $apiKey, $associative);
 
 // get your available credits
 $availableCredits = $checkClient->credits;
