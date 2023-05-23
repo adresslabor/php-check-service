@@ -1,6 +1,6 @@
 {
 	"name": "adresslabor/check-service",
-	"description": "A helper library to optimise data where it is generated! Real-time checks on the website or in any application.",
+	"description": "A helper library to optimise data where it is generated! Real-time checks on the website.",
 	"type": "library",
 	"require": {
 		"php": ">=7.2.5",

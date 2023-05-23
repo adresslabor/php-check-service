@@ -1,13 +1,14 @@
-# Adresslabor PHP CheckClient
+# Adresslabor CheckService
 
-The Adresslabor CheckClient is a utility class for the Adresslabor address validation service.
+The Adresslabor CheckService is a helper library to optimise data where it is generated! Real-time checks on the
+website.
 
 For more information visit <a href="https://adresslabor.de" target="_blank">adresslabor.de</a>
 
 ## Installation
 
 ````shell
-composer require adresslabor/check-client
+composer require adresslabor/check-service
 ````
 
 ## Usage
