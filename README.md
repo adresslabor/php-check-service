@@ -12,7 +12,7 @@ composer require adresslabor/check-client
 
 ## Usage
 
-```injectablephp
+```php
 
 // initialize the checkClient
 $apiCid = "0000";

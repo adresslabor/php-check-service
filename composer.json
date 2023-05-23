@@ -1,20 +1,21 @@
 {
-	"name": "adresslabor/check-client",
+	"name": "adresslabor/check-service",
 	"type": "library",
+	"version": "1.0.0",
 	"require": {
 		"php": ">=7.2.5",
-		"guzzlehttp/guzzle": "^7.5"
+		"guzzlehttp/guzzle": ">=7.2"
 	},
 	"license": "MIT",
 	"autoload": {
 		"psr-4": {
-			"Adresslabor\\PhpClient\\": "src/"
+			"Adresslabor\\CheckService\\": "src/"
 		}
 	},
 	"authors": [
 		{
 			"name": "Simon Paschold",
-			"email": "dev@pascholda.one"
+			"email": "info@paschold.dev"
 		}
 	]
 }

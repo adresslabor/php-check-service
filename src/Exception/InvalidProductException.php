@@ -1,6 +1,6 @@
 <?php
 
-namespace Adresslabor\Exception;
+namespace Adresslabor\CheckService\Exception;
 
 class InvalidProductException extends \Exception
 {

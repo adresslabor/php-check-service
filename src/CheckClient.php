@@ -1,8 +1,8 @@
 <?php
 
-namespace Adresslabor;
+namespace Adresslabor\CheckService;
 
-use Adresslabor\Exception\InvalidProductException;
+use Adresslabor\CheckService\Exception\InvalidProductException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Uri;
