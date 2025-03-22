@@ -91,8 +91,10 @@ class CheckClient
         string $country = null,
         bool $extended = false
     ) {
+        $product = $extended ? 'scx' : 'sc';
+        
         $data = [
-            'product' => $extended ? 'scx' : 'sc',
+            'product' => $product,
             'street' => $street,
             'hno' => $hno,
             'zip' => $zip,
@@ -102,15 +104,12 @@ class CheckClient
         
         $result = $this->check(self::PATH_V3, $data);
         
-        if ($extended) {
-            return $this->assoc
-                ? $result['scx']
-                : $result->scx;
+        if ($this->assoc) {
+            return array_key_exists($product, $result) ? $result[$product] : null;
         }
         
-        return $this->assoc
-            ? $result['sc']
-            : $result->sc;
+        /** @var stdClass $result */
+        return is_object($result) && property_exists($result, $product) ? $result->$product : null;
     }
     
     /**
@@ -159,9 +158,12 @@ class CheckClient
         
         $result = $this->check(self::PATH_V3, $data);
         
-        return $this->assoc
-            ? $result['sc_int']
-            : $result->sc_int;
+        if ($this->assoc) {
+            return array_key_exists('sc_int', $result) ? $result['sc_int'] : null;
+        }
+        
+        /** @var stdClass $result */
+        return is_object($result) && property_exists($result, 'sc_int') ? $result->sc_int : null;
     }
     
     /**
@@ -198,9 +200,12 @@ class CheckClient
         
         $result = $this->check(self::PATH_V3, $data);
         
-        return $this->assoc
-            ? $result['fk']
-            : $result->fk;
+        if ($this->assoc) {
+            return array_key_exists('fk', $result) ? $result['fk'] : null;
+        }
+        
+        /** @var stdClass $result */
+        return is_object($result) && property_exists($result, 'fk') ? $result->fk : null;
     }
     
     /**
@@ -228,9 +233,13 @@ class CheckClient
         
         $result = $this->check(self::PATH_V3, $data);
         
-        return $this->assoc
-            ? $result['nc']
-            : $result->nc;
+        
+        if ($this->assoc) {
+            return array_key_exists('nc', $result) ? $result['nc'] : null;
+        }
+        
+        /** @var stdClass $result */
+        return is_object($result) && property_exists($result, 'nc') ? $result->nc : null;
     }
     
     /**
@@ -251,9 +260,12 @@ class CheckClient
         
         $result = $this->check(self::PATH_V3, $data);
         
-        return $this->assoc
-            ? $result['em']
-            : $result->em;
+        if ($this->assoc) {
+            return array_key_exists('em', $result) ? $result['em'] : null;
+        }
+        
+        /** @var stdClass $result */
+        return is_object($result) && property_exists($result, 'em') ? $result->em : null;
     }
     
     /**
@@ -299,9 +311,12 @@ class CheckClient
         
         $result = $this->check(self::PATH_V3, $data);
         
-        return $this->assoc
-            ? $result['pb']
-            : $result->pb;
+        if ($this->assoc) {
+            return array_key_exists('pb', $result) ? $result['pb'] : null;
+        }
+        
+        /** @var stdClass $result */
+        return is_object($result) && property_exists($result, 'pb') ? $result->pb : null;
     }
     
     /**
@@ -322,9 +337,12 @@ class CheckClient
         
         $result = $this->check(self::PATH_V3, $data);
         
-        return $this->assoc
-            ? $result['vatid']
-            : $result->vatid;
+        if ($this->assoc) {
+            return array_key_exists('vatid', $result) ? $result['vatid'] : null;
+        }
+        
+        /** @var stdClass $result */
+        return is_object($result) && property_exists($result, 'vatid') ? $result->vatid : null;
     }
     
     

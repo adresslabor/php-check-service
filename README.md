@@ -21,7 +21,7 @@ $apiKey = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
 $associative = true;
 
 // The client will test your credentials first
-$checkClient = new \Adresslabor\CheckClient($apiCid, $apiKey, $associative);
+$checkClient = new \Adresslabor\CheckService\CheckClient($apiCid, $apiKey, $associative);
 
 // get your available credits
 $availableCredits = $checkClient->credits;
@@ -31,7 +31,7 @@ $scResult = $checkClient->addressCheckDACH("Kolping Str.", "14", "63768", "Hösb
 $scxResult = $checkClient->addressCheckDACH("Kolping Str.", "14", "63768", "Hösbach", "DE", true);
 
 // https://adresslabor.de/de/produkte/adress-check-world.html
-$scIntResult = $checkClient->addressCheckWorld("Kolping Str.", "14", "63768", "Hösbach", "DE","","","", "", "", "");
+$scIntResult = $checkClient->addressCheckWorld("Kolping Str.","63768", "Hösbach", "DE","","","", "", "", "", "14");
 
 // https://adresslabor.de/de/produkte/fake-check.html
 $fkResult = $checkClient->fakeCheck("Donald", "Duck", "Kolping Str.", "14", "63768", "Hösbach", "DE");
@@ -52,7 +52,7 @@ $vatidResult = $checkClient->vatNumberCheck("DE304496992");
 $vatidxResult = $checkClient->vatNumberCheck("DE304496992", true);
 
 // execute multiple checks in one single request
-$multiCheckResult = $checkClient->check(\Adresslabor\CheckClient::PATH_V3, [
+$multiCheckResult = $checkClient->check(\Adresslabor\CheckService\CheckClient::PATH_V3, [
     'product' => 'fk,nc,scx',
     'firstname' => 'Rolf',
     'lastname' => 'Paschold',
